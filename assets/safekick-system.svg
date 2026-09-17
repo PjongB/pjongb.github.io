@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#55758b"/></marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#2f7252"/></marker>
+    <style>
+      text{font-family:"Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif}
+      .title{font-size:48px;font-weight:800;fill:#203442}.subtitle{font-size:21px;font-weight:500;fill:#63737e}
+      .cardTitle{font-size:25px;font-weight:800;fill:#203442}.cardSub{font-size:16px;font-weight:700;fill:#55758b}
+      .body{font-size:17px;font-weight:500;fill:#566875}.tag{font-size:15px;font-weight:800;fill:#2f7252}
+      .label{font-size:15px;font-weight:800;fill:#456377}.footer{font-size:15px;font-weight:500;fill:#5c6a74}
+    </style>
+  </defs>
+  <rect width="1920" height="1080" fill="#f5f7f8"/>
+  <text x="120" y="104" class="title">전체 시스템 아키텍처</text>
+  <line x1="120" y1="143" x2="1800" y2="143" stroke="#2f7252" stroke-width="3"/>
+  <text x="120" y="190" class="subtitle">앱은 서비스 서버와 안전 제어 장치에 각각 연결되고, Raspberry Pi가 STM32의 물리 제어를 중계합니다.</text>
+  <rect x="120" y="226" width="1680" height="648" fill="#ffffff" stroke="#d8e0e5" stroke-width="2"/>
+
+  <g>
+    <rect x="170" y="326" width="300" height="350" rx="22" fill="#ffffff" stroke="#b9cbd7" stroke-width="3"/>
+    <circle cx="320" cy="372" r="27" fill="#6f91a8"/><text x="320" y="381" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">1</text>
+    <rect x="286" y="417" width="68" height="112" rx="12" fill="none" stroke="#557f98" stroke-width="6"/>
+    <line x1="304" y1="435" x2="336" y2="435" stroke="#557f98" stroke-width="5" stroke-linecap="round"/><circle cx="320" cy="510" r="5" fill="#557f98"/>
+    <text x="320" y="574" text-anchor="middle" class="cardTitle">스마트폰 앱</text><text x="320" y="605" text-anchor="middle" class="cardSub">사용자 접점</text>
+    <text x="320" y="640" text-anchor="middle" class="body">로그인 · 인증 · 상태 확인</text>
+  </g>
+
+  <g>
+    <rect x="640" y="276" width="350" height="240" rx="22" fill="#ffffff" stroke="#b9cbd7" stroke-width="3"/>
+    <circle cx="684" cy="319" r="24" fill="#6f91a8"/><text x="684" y="327" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">2</text>
+    <rect x="720" y="307" width="58" height="54" rx="8" fill="none" stroke="#557f98" stroke-width="5"/>
+    <line x1="733" y1="324" x2="765" y2="324" stroke="#557f98" stroke-width="4" stroke-linecap="round"/><line x1="733" y1="340" x2="758" y2="340" stroke="#557f98" stroke-width="4" stroke-linecap="round"/>
+    <text x="806" y="326" class="cardTitle">Node.js 서버</text><text x="806" y="356" class="cardSub">서비스 백엔드 · PostgreSQL</text>
+    <line x1="680" y1="388" x2="950" y2="388" stroke="#e1e7eb" stroke-width="2"/>
+    <text x="680" y="425" class="body">계정 · 킥보드 · 주행 이력</text><text x="680" y="457" class="body">암호화 얼굴 데이터 저장</text>
+    <rect x="680" y="475" width="112" height="28" rx="14" fill="#edf4f0"/><text x="736" y="495" text-anchor="middle" class="tag">REST · JWT</text>
+  </g>
+
+  <g>
+    <rect x="640" y="584" width="350" height="240" rx="22" fill="#ffffff" stroke="#2f7252" stroke-width="4"/>
+    <circle cx="684" cy="627" r="24" fill="#2f7252"/><text x="684" y="635" text-anchor="middle" font-size="20" font-weight="800" fill="#ffffff">3</text>
+    <circle cx="744" cy="625" r="17" fill="none" stroke="#2f7252" stroke-width="5"/><path d="M744 642v25M726 654h36" fill="none" stroke="#2f7252" stroke-width="5" stroke-linecap="round"/>
+    <text x="790" y="634" class="cardTitle">Raspberry Pi 5</text><text x="790" y="664" class="cardSub">안전 판단 · FastAPI · AI</text>
+    <line x1="680" y1="696" x2="950" y2="696" stroke="#e1e7eb" stroke-width="2"/>
+    <text x="680" y="733" class="body">얼굴·헬멧 인증 / 안전 세션</text><text x="680" y="765" class="body">HW-484(GPIO17) · UART 중계</text>
+    <rect x="680" y="782" width="112" height="28" rx="14" fill="#edf4f0"/><text x="736" y="802" text-anchor="middle" class="tag">REST · SSE</text>
+  </g>
+
+  <g>
+    <rect x="1160" y="326" width="300" height="350" rx="22" fill="#ffffff" stroke="#b9cbd7" stroke-width="3"/>
+    <circle cx="1310" cy="372" r="27" fill="#6f91a8"/><text x="1310" y="381" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">4</text>
+    <rect x="1275" y="420" width="70" height="70" rx="10" fill="none" stroke="#557f98" stroke-width="5"/>
+    <path d="M1260 432h15M1260 450h15M1260 468h15M1345 432h15M1345 450h15M1345 468h15M1287 405v15M1310 405v15M1333 405v15M1287 490v15M1310 490v15M1333 490v15" stroke="#557f98" stroke-width="4"/>
+    <text x="1310" y="550" text-anchor="middle" class="cardTitle">STM32F411RE</text><text x="1310" y="581" text-anchor="middle" class="cardSub">실시간 센서·구동 제어</text>
+    <text x="1310" y="616" text-anchor="middle" class="body">MQ-3 · HX711×4</text><text x="1310" y="647" text-anchor="middle" class="body">릴레이 · 부저 · PWM</text>
+  </g>
+
+  <g>
+    <rect x="1540" y="326" width="210" height="350" rx="22" fill="#fffdf8" stroke="#e7b55a" stroke-width="3"/>
+    <circle cx="1645" cy="372" r="27" fill="#e6a128"/><text x="1645" y="381" text-anchor="middle" font-size="22" font-weight="800" fill="#ffffff">5</text>
+    <circle cx="1645" cy="458" r="48" fill="none" stroke="#d89723" stroke-width="6"/><circle cx="1645" cy="458" r="12" fill="#d89723"/>
+    <path d="M1645 410v-22M1645 528v-22M1597 458h-22M1715 458h-22" stroke="#d89723" stroke-width="6" stroke-linecap="round"/>
+    <text x="1645" y="550" text-anchor="middle" class="cardTitle">킥보드 구동부</text><text x="1645" y="581" text-anchor="middle" font-size="16" font-weight="800" fill="#c07d13">물리 출력</text>
+    <text x="1645" y="616" text-anchor="middle" class="body">LOCK / UNLOCK</text><text x="1645" y="647" text-anchor="middle" class="body">L298N · DC 모터</text>
+  </g>
+
+  <path d="M470 405C545 405 565 366 640 366" fill="none" stroke="#55758b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="500" y="335" width="112" height="31" rx="15" fill="#f5f7f8"/><text x="556" y="357" text-anchor="middle" class="label">REST · JWT</text>
+  <path d="M470 585C545 585 565 704 640 704" fill="none" stroke="#2f7252" stroke-width="5" marker-end="url(#arrowGreen)"/>
+  <rect x="493" y="630" width="126" height="31" rx="15" fill="#edf4f0"/><text x="556" y="652" text-anchor="middle" class="tag">REST · SSE</text>
+  <path d="M815 516L815 584" fill="none" stroke="#8da0ab" stroke-width="3" stroke-dasharray="8 8" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <rect x="835" y="535" width="142" height="31" rx="15" fill="#f5f7f8"/><text x="906" y="557" text-anchor="middle" class="label">Internal API</text>
+  <path d="M990 704C1080 704 1080 545 1160 545" fill="none" stroke="#55758b" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="1007" y="601" width="137" height="51" rx="15" fill="#f5f7f8"/><text x="1075" y="623" text-anchor="middle" class="label">USB VCP</text><text x="1075" y="643" text-anchor="middle" font-size="13" font-weight="700" fill="#63737e">UART 115200</text>
+  <path d="M1460 501L1540 501" fill="none" stroke="#d89723" stroke-width="5" marker-end="url(#arrowGreen)"/><text x="1500" y="477" text-anchor="middle" font-size="14" font-weight="800" fill="#b47410">제어</text>
+
+  <rect x="640" y="842" width="820" height="32" fill="#edf4f0"/>
+  <text x="1050" y="864" text-anchor="middle" font-size="15" font-weight="800" fill="#2f7252">핵심: 위험 조건을 통과한 경우에만 UNLOCK · 이상 상태에서는 즉시 LOCK</text>
+  <text x="120" y="930" class="footer">그림 6. SAFE-KICK 전체 시스템의 서비스·안전 제어·물리 구동 아키텍처</text>
+  <text x="120" y="1031" class="footer">06 / 21  |  SafeKick</text>
+  <text x="1800" y="1031" text-anchor="end" class="footer">출처: safe-kick-app · server · raspi · stm32 (main)</text>
+</svg>

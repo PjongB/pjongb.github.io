@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1580" viewBox="0 0 1800 1580">
+  <defs>
+    <style>
+      text { font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; fill: #16222c; }
+      .title { font-size: 42px; font-weight: 800; }
+      .subtitle { font-size: 19px; fill: #52606b; }
+      .h1 { font-size: 25px; font-weight: 800; }
+      .h2 { font-size: 20px; font-weight: 750; }
+      .body { font-size: 17px; }
+      .small { font-size: 14px; fill: #425466; }
+      .pin { font-size: 17px; font-weight: 750; }
+      .box { fill: #fff; stroke: #405466; stroke-width: 2.5; rx: 18; }
+      .pi { fill: #eef7f2; stroke: #16704c; stroke-width: 4; rx: 22; }
+      .mcu { fill: #edf5fb; stroke: #1769aa; stroke-width: 4; rx: 22; }
+      .sensor { fill: #fff; stroke: #637687; stroke-width: 2.5; rx: 15; }
+      .relay { fill: #f3f8ff; stroke: #2469a0; stroke-width: 3; rx: 15; }
+      .warn { fill: #fff5d8; stroke: #d78d00; stroke-width: 3; rx: 16; }
+      .danger { fill: #fff0ed; stroke: #cf3f2f; stroke-width: 3; rx: 16; }
+      .signal { fill: none; stroke: #1769e0; stroke-width: 4; }
+      .analog { fill: none; stroke: #138a50; stroke-width: 4; }
+      .usb { fill: none; stroke: #6841c4; stroke-width: 8; }
+      .v5 { fill: none; stroke: #dc3434; stroke-width: 5; }
+      .v33 { fill: none; stroke: #ee8a13; stroke-width: 5; }
+      .gnd { fill: none; stroke: #20272d; stroke-width: 5; }
+      .contact { fill: none; stroke: #008b72; stroke-width: 5; }
+    </style>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1769e0"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#008b72"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6841c4"/></marker>
+  </defs>
+
+  <rect width="1800" height="1580" fill="#f3f5f7"/>
+  <text x="900" y="60" text-anchor="middle" class="title">SAFE-KICK 실제 하드웨어 배선도</text>
+  <text x="900" y="94" text-anchor="middle" class="subtitle">Raspberry Pi 5 · HW-484 · ST-LINK USB UART · NUCLEO-F411RE · MQ-3 · HX711 × 4 · 부저 · 릴레이</text>
+
+  <!-- Raspberry Pi -->
+  <rect x="55" y="135" width="410" height="245" class="pi"/>
+  <text x="260" y="180" text-anchor="middle" class="h1">Raspberry Pi 5</text>
+  <text x="85" y="225" class="body">USB 포트</text>
+  <text x="85" y="258" class="small">전원 공급 + ST-LINK VCP 통신</text>
+  <text x="85" y="298" class="pin">Linux 장치</text>
+  <text x="220" y="298" class="body">/dev/ttyACM0</text>
+  <text x="85" y="329" class="pin">UART</text>
+  <text x="220" y="329" class="body">115200 · 8N1</text>
+  <text x="85" y="360" class="pin">GPIO17</text>
+  <text x="220" y="360" class="body">HW-484 DO · Active-Low</text>
+
+  <!-- MCU -->
+  <rect x="650" y="125" width="500" height="820" class="mcu"/>
+  <text x="900" y="172" text-anchor="middle" class="h1">NUCLEO-F411RE</text>
+  <text x="900" y="204" text-anchor="middle" class="subtitle">STM32F411RE · GPIO 3.3V</text>
+  <rect x="730" y="235" width="340" height="92" class="box"/>
+  <text x="900" y="270" text-anchor="middle" class="h2">ST-LINK USB 커넥터</text>
+  <text x="900" y="302" text-anchor="middle" class="small">기본 솔더브리지: USART2 ↔ ST-LINK VCP</text>
+  <path d="M465 245 H650" class="usb" marker-end="url(#arrow-purple)"/>
+  <text x="555" y="230" text-anchor="middle" class="small">USB 케이블</text>
+
+  <!-- MCU pins -->
+  <text x="680" y="382" class="pin">PA1</text><text x="770" y="382" class="body">MQ-3 ADC</text>
+  <text x="680" y="430" class="pin">PA6</text><text x="770" y="430" class="body">BUZZER 제어</text>
+  <text x="680" y="478" class="pin">PA7</text><text x="770" y="478" class="body">RELAY IN</text>
+  <text x="680" y="526" class="pin">PA2</text><text x="770" y="526" class="body">USART2 TX</text>
+  <text x="680" y="574" class="pin">PA3</text><text x="770" y="574" class="body">USART2 RX</text>
+
+  <line x1="675" y1="615" x2="1125" y2="615" stroke="#a9b8c4" stroke-width="2"/>
+  <text x="680" y="655" class="pin">PB0 / PB1</text><text x="855" y="655" class="body">FL DT / SCK</text>
+  <text x="680" y="705" class="pin">PB2 / PB10</text><text x="855" y="705" class="body">FR DT / SCK</text>
+  <text x="680" y="755" class="pin">PB12 / PB13</text><text x="855" y="755" class="body">RL DT / SCK</text>
+  <text x="680" y="805" class="pin">PB14 / PB15</text><text x="855" y="805" class="body">RR DT / SCK</text>
+  <line x1="675" y1="842" x2="1125" y2="842" stroke="#a9b8c4" stroke-width="2"/>
+  <text x="680" y="882" class="pin">5V</text><text x="770" y="882" class="body">MQ-3 · 릴레이 · 부저 전원</text>
+  <text x="680" y="920" class="pin">3.3V</text><text x="770" y="920" class="body">HX711 4개 전원</text>
+
+  <!-- HW-484 -->
+  <rect x="45" y="415" width="520" height="185" class="sensor"/>
+  <text x="70" y="455" class="h1">HW-484 마이크 사운드 센서</text>
+  <text x="70" y="495" class="pin">VCC / GND</text><text x="200" y="495" class="body">→ Pi 3.3V / Pi GND</text>
+  <text x="70" y="531" class="pin">DO</text><text x="155" y="531" class="body">→ Raspberry Pi GPIO17 · LOW 감지</text>
+  <text x="70" y="567" class="pin">AO</text><text x="155" y="567" class="body">→ 미사용</text>
+  <text x="405" y="567" class="small">유효 호흡 ≥ 0.5초</text>
+  <path d="M565 515 H610 V360 H465" class="signal" marker-end="url(#arrow-blue)"/>
+
+  <!-- MQ-3 -->
+  <rect x="45" y="630" width="520" height="235" class="sensor"/>
+  <text x="70" y="670" class="h1">MQ-3 모듈</text>
+  <text x="70" y="712" class="pin">VCC</text><text x="155" y="712" class="body">→ STM32 5V</text>
+  <text x="70" y="748" class="pin">GND</text><text x="155" y="748" class="body">→ 공통 GND</text>
+  <text x="70" y="784" class="pin">DO</text><text x="155" y="784" class="body">→ 미사용</text>
+  <text x="70" y="824" class="pin">AO</text><text x="155" y="824" class="body">→ 5.1kΩ → PA1</text>
+  <text x="315" y="824" class="small">PA1 지점: 10kΩ + 100nF → GND</text>
+  <path d="M565 810 H610 V370 H650" class="analog" marker-end="url(#arrow-green)"/>
+
+  <!-- HX711 -->
+  <rect x="45" y="895" width="520" height="265" class="sensor"/>
+  <text x="70" y="935" class="h1">로드셀 4개 + HX711 4개</text>
+  <text x="70" y="976" class="body">로드셀 → 각 HX711: E+ · E− · A+ · A−</text>
+  <text x="70" y="1013" class="pin">HX711 VCC</text><text x="220" y="1013" class="body">→ STM32 3.3V</text>
+  <text x="70" y="1049" class="pin">HX711 GND</text><text x="220" y="1049" class="body">→ 공통 GND</text>
+  <text x="70" y="1089" class="body">FL: PB0/PB1 · FR: PB2/PB10</text>
+  <text x="70" y="1125" class="body">RL: PB12/PB13 · RR: PB14/PB15</text>
+  <path d="M565 1065 H610 V700 H650" class="signal" marker-end="url(#arrow-blue)"/>
+
+  <!-- Buzzer -->
+  <rect x="1230" y="125" width="525" height="250" class="sensor"/>
+  <text x="1255" y="166" class="h1">2선 능동 부저 구동</text>
+  <text x="1255" y="208" class="body">PA6 → 1kΩ → NPN Base</text>
+  <text x="1255" y="242" class="body">Base → 10kΩ → GND</text>
+  <text x="1255" y="276" class="body">부저 (+) → 5V</text>
+  <text x="1255" y="310" class="body">부저 (−) → NPN Collector</text>
+  <text x="1255" y="344" class="body">NPN Emitter → 공통 GND</text>
+  <path d="M1150 418 H1190 V210 H1230" class="signal" marker-end="url(#arrow-blue)"/>
+
+  <!-- Relay module -->
+  <rect x="1230" y="410" width="525" height="315" class="relay"/>
+  <text x="1255" y="452" class="h1">5V 1채널 릴레이 모듈</text>
+  <text x="1255" y="494" class="pin">IN</text><text x="1335" y="494" class="body">← PA7</text>
+  <text x="1255" y="530" class="pin">VCC</text><text x="1335" y="530" class="body">← STM32 5V</text>
+  <text x="1255" y="566" class="pin">GND</text><text x="1335" y="566" class="body">← 공통 GND</text>
+  <line x1="1255" y1="592" x2="1730" y2="592" stroke="#9db4c5" stroke-width="2"/>
+  <text x="1255" y="630" class="h2">접점부</text>
+  <text x="1255" y="667" class="pin">COM</text><text x="1350" y="667" class="body">← 컨트롤러 ENABLE 입력선</text>
+  <text x="1255" y="702" class="pin">NO</text><text x="1350" y="702" class="body">→ ENABLE 전원/신호선</text>
+  <path d="M1150 466 H1195 V486 H1230" class="signal" marker-end="url(#arrow-blue)"/>
+
+  <!-- Controller -->
+  <rect x="1230" y="770" width="525" height="175" class="box"/>
+  <text x="1255" y="812" class="h1">킥보드 모터 컨트롤러</text>
+  <text x="1255" y="855" class="body">저전류 ENABLE / KEY / IGNITION 회로</text>
+  <text x="1255" y="894" class="small">UNLOCK: 릴레이 ON · LOCK: 릴레이 OFF</text>
+  <path d="M1490 725 V770" class="contact" marker-end="url(#arrow-green)"/>
+
+  <!-- Power rail -->
+  <rect x="45" y="1210" width="1110" height="210" class="box"/>
+  <text x="70" y="1250" class="h1">현재 테스트 전원 구성</text>
+  <path d="M85 1293 H1115" class="v5"/><text x="85" y="1282" class="pin">5V: Pi USB → ST-LINK/Nucleo → MQ-3 · 릴레이 · 부저</text>
+  <path d="M85 1342 H1115" class="v33"/><text x="85" y="1331" class="pin">3.3V: Pi → HW-484 · Nucleo → HX711 4개</text>
+  <path d="M85 1391 H1115" class="gnd"/><text x="85" y="1380" class="pin">GND: Pi · HW-484 · Nucleo · MQ-3 · HX711 · 부저 · 릴레이 모두 공통</text>
+
+  <!-- Warnings -->
+  <rect x="1205" y="1210" width="550" height="210" class="danger"/>
+  <text x="1230" y="1252" class="h1">릴레이 접점 주의</text>
+  <text x="1230" y="1294" class="body">소형 릴레이로 모터 배터리 주전원선을</text>
+  <text x="1230" y="1327" class="body">직접 차단하지 말 것. 정격 전류를 초과할 수 있음.</text>
+  <text x="1230" y="1369" class="body">컨트롤러 저전류 ENABLE 선을 차단하거나,</text>
+  <text x="1230" y="1402" class="body">정격 DC 컨택터/차단 회로를 별도로 사용할 것.</text>
+
+  <rect x="45" y="1455" width="1710" height="68" class="warn"/>
+  <text x="900" y="1497" text-anchor="middle" class="h2">전원 OFF 상태에서 배선 · Pi GPIO 입력 최대 3.3V · PA1 최대 3.3V · GPIO에 부저/릴레이 코일 직접 연결 금지</text>
+</svg>
