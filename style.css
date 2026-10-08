@@ -68,3 +68,100 @@
 .evidence-note{display:block;margin-top:8px;font-size:10px;line-height:1.7;color:var(--muted)}
 @media(max-width:600px){.contribution-page #system .case-copy{grid-row:1}.contribution-page .ownership-summary{padding:15px}.contribution-page .case-copy strong{font-weight:650}}
 @media print{.contribution-page .ownership-summary{padding:3mm 4mm;border-left-width:1mm}.contribution-page .ownership-summary h3{font-size:10pt}.contribution-jump{display:none}.evidence-note{font-size:6.5pt;margin-top:1.5mm}.contribution-page #system .case-copy{grid-row:auto}}
+
+/* Two-sheet case studies: system + personal work, then troubleshooting. */
+.two-page-case .case-tabs{flex-wrap:wrap;align-items:center}
+.print-format{margin-left:auto;color:var(--muted);font-size:11px;white-space:nowrap}
+.two-page-case .case-title{font-size:clamp(25px,2.5vw,36px);line-height:1.3;letter-spacing:-.045em}
+.two-page-case .case-grid{grid-template-columns:1fr 1.08fr;gap:30px;align-items:start}
+.two-page-case .system-summary{padding:0 2px 10px}
+.two-page-case .system-summary h3{font-size:11px;color:var(--accent);letter-spacing:.04em;margin:0 0 6px}
+.two-page-case .system-summary p{font-size:12px;line-height:1.75;color:var(--muted);margin:0;word-break:keep-all;overflow-wrap:anywhere}
+.two-page-case .case-copy h3{font-size:16px;line-height:1.5}
+.two-page-case .case-copy p{font-size:13px;line-height:1.85}
+.two-page-case .scope-note{border-top:1px solid var(--line);padding-top:12px;margin-top:17px;color:var(--muted);font-size:10px!important;line-height:1.7!important}
+.two-page-case #contribution{scroll-margin-top:120px}
+.two-page-case .case-visuals.dual .case-media img{height:auto;min-height:0;max-height:245px;object-fit:contain}
+.two-page-case .case-visuals.dual .case-video video{max-height:230px;object-fit:contain}
+.two-page-case .plant-map img{min-height:0!important;max-height:440px!important}
+.two-page-case .plant-results .plant-photo a{max-height:240px}
+.two-page-case .plant-proof{padding:20px 22px}
+.two-page-case .plant-flow{margin-top:14px;gap:6px}
+.two-page-case .plant-flow li{padding:8px 10px}
+.two-page-case .plant-flow li strong{font-size:12px}
+.two-page-case .plant-metric{margin:12px 0}
+.two-page-case .plant-metric>span{font-size:40px}
+.supporting-media{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px;font-size:12px}
+.supporting-media summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.supporting-media ul{display:flex;flex-wrap:wrap;gap:10px 24px;list-style:none;padding:10px 0 0;margin:0;color:var(--muted)}
+@media(max-width:800px){
+ .two-page-case .case-grid{grid-template-columns:1fr;gap:24px}
+ .two-page-case #system .case-copy{grid-row:1}
+ .two-page-case .case-title{font-size:27px}
+ .two-page-case .case-visuals.dual .case-media img{max-height:340px}
+ .two-page-case .case-tabs{gap:10px}
+ .print-format{margin-left:0}
+}
+@media print{
+ @page{size:A4 landscape;margin:10mm}
+ .two-page-case{color:#202722;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .two-page-case .project{margin:0!important}
+ /* Auto height deliberately exposes overflow instead of clipping it. Keep content below 188 mm. */
+ .two-page-case .project>.sheet.case-sheet{
+  box-sizing:border-box;width:100%;height:auto;min-height:186mm;margin:0!important;
+  padding:3mm 5mm;display:flex;flex-direction:column;overflow:visible;
+  break-inside:avoid-page;break-after:page!important;page-break-after:always!important;
+ }
+ .two-page-case .project>.sheet.case-sheet:last-child{break-after:auto!important;page-break-after:auto!important}
+ .two-page-case .project-top{margin:0 0 2.5mm;padding-bottom:2mm}
+ .two-page-case .eyebrow,.two-page-case .folio{font-size:7pt}
+ .two-page-case .case-title{font-size:22pt!important;line-height:1.25;margin:0}
+ .two-page-case .case-lead{font-size:9pt;line-height:1.55;margin:2mm 0 3mm}
+ .two-page-case .case-meta{font-size:7pt;line-height:1.5;padding:2mm 0;gap:3mm}
+ .two-page-case .tags{margin:2mm 0 3mm;gap:1.5mm}
+ .two-page-case .tags span{font-size:6.5pt;padding:1mm 2mm}
+ .two-page-case .project-awards{margin:0 0 3mm;padding:1.5mm 2mm;font-size:6.5pt}
+ .two-page-case .case-grid{grid-template-columns:1fr 1.08fr;gap:7mm;align-items:start;flex:0 0 auto}
+ .two-page-case #system .case-copy{grid-row:auto}
+ .two-page-case .case-visuals{gap:3mm}
+ .two-page-case .system-summary{padding:0}
+ .two-page-case .system-summary h3{font-size:7pt;margin:0 0 1mm}
+ .two-page-case .system-summary p{font-size:7.5pt;line-height:1.5}
+ .two-page-case .case-copy{padding-bottom:2mm}
+ .two-page-case .case-copy h3{font-size:10pt;line-height:1.45;margin-bottom:2mm}
+ .two-page-case .case-copy p{font-size:8.5pt;line-height:1.65}
+ .two-page-case .case-copy section+section{margin-top:4mm;padding-top:3mm}
+ .two-page-case .ownership-summary{padding:3mm;border-left-width:.8mm}
+ .two-page-case .scope-note{font-size:6.8pt!important;line-height:1.6!important;margin-top:3mm;padding-top:2mm}
+ .two-page-case .case-media img{height:auto;min-height:0;max-height:106mm;object-fit:contain}
+ .two-page-case .case-visuals.dual .case-media img{height:auto;min-height:0;max-height:43mm}
+ .two-page-case #system .case-visuals.dual .case-media img{max-height:38mm}
+ .two-page-case #safekick #system .case-media:first-of-type img{max-height:53mm}
+ .two-page-case #safekick #system .case-media:last-child img{max-height:24mm}
+ .two-page-case .case-video .print-video-poster{max-height:43mm!important}
+ .two-page-case figcaption{font-size:6pt;line-height:1.5;padding:1mm 1.5mm}
+ .two-page-case .evidence-note{font-size:6.5pt;margin-top:2mm}
+ .two-page-case .page-footer{position:static;margin-top:auto;padding-top:3mm;min-height:8mm;font-size:6pt;gap:4mm;line-height:1.5;align-items:end}
+ .two-page-case .page-footer>span:last-child{white-space:nowrap}
+ .two-page-case .plant-map img{max-height:105mm!important}
+ .two-page-case .plant-demo-link{font-size:7pt;padding:1mm 0;margin:0}
+ .two-page-case .plant-proof{padding:3mm 4mm}
+ .two-page-case .plant-proof-label{font-size:7pt}
+ .two-page-case .plant-metric{margin:2mm 0;gap:5mm}
+ .two-page-case .plant-metric>span{font-size:26pt}
+ .two-page-case .plant-metric small,.two-page-case .plant-proof-note{font-size:6.5pt;line-height:1.5}
+ .two-page-case .plant-flow{margin-top:2mm;gap:1mm}
+ .two-page-case .plant-flow li{padding:1.2mm 2mm}
+ .two-page-case .plant-flow li strong{font-size:7pt}
+ .two-page-case .plant-results .plant-photo a{aspect-ratio:auto;height:45mm;max-height:none}
+ .two-page-case .plant-results .plant-photo img{width:33.75mm;height:60mm;max-height:none!important}
+ .two-page-case .supporting-media{display:none!important}
+}
+@media print{
+ .two-page-case .plant-map img{max-height:85mm!important}
+ .two-page-case #library #system .case-media:first-of-type img{max-height:53mm}
+ .two-page-case #library #system .case-media:last-child img{max-height:24mm}
+ .two-page-case #umjoo #system .case-media:first-of-type img{max-height:52mm}
+ .two-page-case #umjoo #system .case-media:last-child img{max-height:27mm}
+ .two-page-case #safekick #system .case-media:last-child img{max-height:32mm}
+}
