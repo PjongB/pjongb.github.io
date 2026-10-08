@@ -165,3 +165,12 @@
  .two-page-case #umjoo #system .case-media:last-child img{max-height:27mm}
  .two-page-case #safekick #system .case-media:last-child img{max-height:32mm}
 }
+
+/* Keep every supporting file visible beside the presentation download. */
+.project-resources{grid-template-columns:1fr;gap:20px;scroll-margin-top:24px}
+.resource-files{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.resource-file{min-height:92px;box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;padding:20px 22px;border:1px solid #c8d3dd;border-radius:12px;transition:background-color .15s,border-color .15s}
+.resource-file strong{font-size:16px;line-height:1.5}
+.resource-file span{font-size:12px;line-height:1.6}
+.resource-file:hover{background:#edf3f7;border-color:#397e9e}
+@media(max-width:680px){.resource-files{grid-template-columns:1fr}.resource-file{min-height:88px;padding:18px}.resource-file strong{font-size:15px}}
