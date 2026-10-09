@@ -8,7 +8,7 @@
 
 | 수정할 곳 | 들어 있는 내용 | 편집 화면 |
 | --- | --- | --- |
-| 홈페이지 | 첫 화면 소개글, 기술 스택, 수상 내역, 프로젝트 카드 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80.md) |
+| 홈페이지 | 첫 화면 소개글, 기술스택, 경력 내역, 수상 내역, 프로젝트 카드 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80.md) |
 | 스마트플랜트 | 진행 상태, PM·팀장 역할, 기술 지원 내용 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%94%8C%EB%9E%9C%ED%8A%B8.md) |
 | 스마트도서관 | RFID·통신·기판 제작과 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%8A%A4%EB%A7%88%ED%8A%B8%EB%8F%84%EC%84%9C%EA%B4%80.md) |
 | ARMIGO | 하드웨어 설계, 다중 모터 제어와 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/ARMIGO.md) |
