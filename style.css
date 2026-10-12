@@ -289,3 +289,27 @@
  .home-page .card-copy h3{margin:1mm 0}
  .home-page .site-footer{margin-top:1mm;padding-top:1.5mm}
 }
+
+/* Smart plant: first demonstration, 2026-10-12. */
+.plant-page .plant-overview img{height:auto!important;min-height:0!important;max-height:330px!important;object-fit:contain}
+.plant-command{padding:18px;background:#edf2f1;border:1px solid #d9e1de}
+.plant-command>strong{display:block;text-align:center;font-size:14px;line-height:1.65}
+.plant-devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
+.plant-devices>span{padding:12px 6px;background:white;border-top:3px solid #647f79;text-align:center;font-size:11px;line-height:1.8}
+.plant-page .plant-jig img{height:auto!important;min-height:0!important;max-height:260px!important;object-fit:contain}
+.plant-page .plant-metric{gap:12px;justify-content:space-between}
+.plant-page .plant-metric>span{font-size:36px}
+.plant-page .plant-proof-label{font-size:13px}
+.plant-page .plant-metric small{font-size:12px;line-height:1.6}
+@media(max-width:480px){.plant-command{padding:12px}.plant-command>strong{font-size:13px}.plant-devices{grid-template-columns:1fr;gap:6px}.plant-devices>span{font-size:13px;padding:8px}.plant-page .plant-metric>span{font-size:30px}.plant-page .plant-metric small{font-size:10px}}
+@media print{
+ .plant-page .plant-overview img{max-height:61mm!important}
+ .plant-page .plant-command{padding:3mm}
+ .plant-page .plant-command>strong{font-size:8pt}
+ .plant-page .plant-devices{grid-template-columns:repeat(3,minmax(0,1fr));gap:2mm;margin-top:2mm}
+ .plant-page .plant-devices>span{font-size:6.5pt;padding:2mm 1mm}
+ .plant-page .plant-jig img{max-height:50mm!important}
+ .plant-page .plant-metric>span{font-size:25pt}
+ .plant-page .plant-metric small{font-size:7pt}
+ .plant-page .plant-proof-label{font-size:8pt}
+}
