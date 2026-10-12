@@ -8,3 +8,5 @@
 - ARMIGO: team leader, hardware design and multi-motor control. The user did not perform 3D printing fabrication.
 - Smart plant is ongoing. Personal role: team leader/PM and control planning, website creation, system-wide implementation guidance and technical support, hardware configuration and production support. The user specifically proposed hardware configuration, host communication methods and using four ArUco markers. Describe this as concrete technical direction, while distinguishing it from personally implementing all teammates’ device code. Do not invent protocols, marker geometry or measured improvements.
 - Publishing uses `.github/workflows/pages.yml` with GitHub Pages Actions. Deploy only `_site`; never upload source resumes or unrelated local files.
+
+- Smart plant case-study body: omit jig-improvement images/descriptions and model training/success-rate sections at the user’s request. Keep the second sheet focused on personal hardware, host communication and four-marker ArUco guidance.

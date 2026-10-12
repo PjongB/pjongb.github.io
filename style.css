@@ -296,7 +296,6 @@
 .plant-command>strong{display:block;text-align:center;font-size:14px;line-height:1.65}
 .plant-devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:14px}
 .plant-devices>span{padding:12px 6px;background:white;border-top:3px solid #647f79;text-align:center;font-size:11px;line-height:1.8}
-.plant-page .plant-jig img{height:auto!important;min-height:0!important;max-height:260px!important;object-fit:contain}
 .plant-page .plant-metric{gap:12px;justify-content:space-between}
 .plant-page .plant-metric>span{font-size:36px}
 .plant-page .plant-proof-label{font-size:13px}
@@ -308,8 +307,24 @@
  .plant-page .plant-command>strong{font-size:8pt}
  .plant-page .plant-devices{grid-template-columns:repeat(3,minmax(0,1fr));gap:2mm;margin-top:2mm}
  .plant-page .plant-devices>span{font-size:6.5pt;padding:2mm 1mm}
- .plant-page .plant-jig img{max-height:50mm!important}
- .plant-page .plant-metric>span{font-size:25pt}
+  .plant-page .plant-metric>span{font-size:25pt}
  .plant-page .plant-metric small{font-size:7pt}
  .plant-page .plant-proof-label{font-size:8pt}
+}
+
+/* Personal technical guidance replaces team model results and jig visuals. */
+.plant-page .plant-personal-work{display:block}
+.plant-personal-work .case-copy{counter-reset:guidance}
+.plant-personal-work .case-copy section{counter-increment:guidance;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:28px;padding:26px;background:#edf2f1;border:1px solid #d9e1de;align-items:start}
+.plant-personal-work .case-copy section+section{margin-top:18px;padding-top:26px}
+.plant-personal-work .case-copy h3{margin:0;color:var(--ink)}
+.plant-personal-work .case-copy h3::before{content:counter(guidance,decimal-leading-zero);display:block;color:var(--accent);font:26px/1.4 ui-monospace,monospace;margin-bottom:10px}
+@media(max-width:680px){.plant-personal-work .case-copy section{grid-template-columns:1fr;gap:14px;padding:20px}.plant-personal-work .case-copy section+section{padding-top:20px}.plant-personal-work .case-copy h3::before{font-size:22px;margin-bottom:5px}}
+@media print{
+ .plant-page .plant-personal-work{display:block}
+ .plant-personal-work .case-copy section{grid-template-columns:1fr 1.8fr;gap:8mm;padding:5mm;min-height:33mm;break-inside:avoid}
+ .plant-personal-work .case-copy section+section{margin-top:4mm;padding-top:5mm}
+ .plant-personal-work .case-copy h3{font-size:11pt}
+ .plant-personal-work .case-copy h3::before{font-size:18pt;margin-bottom:2mm}
+ .plant-personal-work .case-copy p{font-size:10pt;line-height:1.75}
 }
