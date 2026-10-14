@@ -10,9 +10,9 @@
 | --- | --- | --- |
 | 홈페이지 | 첫 화면 소개글, 기술스택, 경력 내역, 수상 내역, 프로젝트 카드 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80.md) |
 | 스마트플랜트 | 진행 상태, 기획·PM·관제, 기술 지원과 1차 시연 결과 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%94%8C%EB%9E%9C%ED%8A%B8.md) |
-| 스마트도서관 | RFID·통신·기판 제작과 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%8A%A4%EB%A7%88%ED%8A%B8%EB%8F%84%EC%84%9C%EA%B4%80.md) |
+| 스마트도서관 | 기구/HW 설계 및 제작, RFID·통신과 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%8A%A4%EB%A7%88%ED%8A%B8%EB%8F%84%EC%84%9C%EA%B4%80.md) |
 | ARMIGO | 하드웨어 설계, 다중 모터 제어와 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/ARMIGO.md) |
-| 세이프킥 | 센서 보정, 구동 제어와 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%84%B8%EC%9D%B4%ED%94%84%ED%82%A5.md) |
+| 세이프킥 | 기구/HW 설계 및 제작, 센서 보정과 구동 제어 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%84%B8%EC%9D%B4%ED%94%84%ED%82%A5.md) |
 | 음주컷 | 하드웨어, 상태 제어와 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%9D%8C%EC%A3%BC%EC%BB%B7.md) |
 | PLC | 자동 적재 프로젝트 설명과 협업 경험 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/PLC.md) |
 
