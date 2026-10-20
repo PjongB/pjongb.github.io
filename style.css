@@ -328,3 +328,23 @@
  .plant-personal-work .case-copy h3::before{font-size:18pt;margin-bottom:2mm}
  .plant-personal-work .case-copy p{font-size:10pt;line-height:1.75}
 }
+
+
+/* Smart plant host control: current UI and individual implementation scope. */
+.plant-page .plant-host-work{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;align-items:start}
+.plant-page .plant-host-screen img{height:auto!important;min-height:0!important;max-height:none;object-fit:contain;background:#f2f4f6}
+.plant-page .plant-host-work .case-copy section+section{margin-top:18px;padding-top:16px}
+.plant-page .plant-host-work .case-copy h3{font-size:15px}
+.plant-page .plant-host-work .case-copy p{font-size:12px;line-height:1.8}
+@media(max-width:800px){
+ .plant-page .plant-host-work{grid-template-columns:1fr;gap:22px}
+ .plant-page .plant-host-work .case-copy h3{font-size:16px}
+ .plant-page .plant-host-work .case-copy p{font-size:14px}
+}
+@media print{
+ .plant-page .plant-host-work{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:7mm}
+ .plant-page .plant-host-screen img{max-height:122mm!important;width:100%;object-fit:contain}
+ .plant-page .plant-host-work .case-copy section+section{margin-top:3mm;padding-top:2.5mm}
+ .plant-page .plant-host-work .case-copy h3{font-size:10pt}
+ .plant-page .plant-host-work .case-copy p{font-size:8.5pt;line-height:1.65}
+}
