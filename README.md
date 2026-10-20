@@ -15,6 +15,7 @@
 | 세이프킥 | 기구/HW 설계 및 제작, 센서 보정과 구동 제어 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%84%B8%EC%9D%B4%ED%94%84%ED%82%A5.md) |
 | 음주컷 | 하드웨어, 상태 제어와 문제 해결 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/%EC%9D%8C%EC%A3%BC%EC%BB%B7.md) |
 | PLC | 자동 적재 프로젝트 설명과 협업 경험 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/PLC.md) |
+| 스마트 비닐하우스 | 대학 팀장·하드웨어·펌웨어, 센서 연동과 펌프 제어 | [수정하기](https://github.com/PjongB/pjongb.github.io/edit/main/content/스마트비닐하우스.md) |
 
 ## 수정 순서
 
@@ -36,7 +37,7 @@
 - 줄을 바꾸면 화면에서도 줄이 바뀝니다. `**강조할 내용**`은 굵게 표시됩니다.
 - `[프로젝트 코드](https://github.com/...)` 형태는 링크입니다. 문장만 바꿀 때는 주소를 유지하세요.
 - 메인의 프로젝트 카드와 상세 페이지는 각각의 파일에서 수정합니다.
-- 상세 페이지는 A4 가로 2쪽에 맞춘 구성입니다. 설명을 많이 늘렸다면 사이트의 **PDF / 인쇄**에서 분량을 확인하세요.
+- 기존 상세 페이지는 A4 가로 2쪽, 대학 스마트 비닐하우스 사례는 1쪽에 맞춘 구성입니다. 설명을 많이 늘렸다면 사이트의 **PDF / 인쇄**에서 분량을 확인하세요.
 - 문구를 잘못 바꿨다면 파일의 **History**에서 이전 내용을 확인할 수 있습니다. 배포 검사에서 오류가 나면 기존 공개 사이트는 유지됩니다.
 - 첨부된 발표 PDF는 원본 파일입니다. 이 문구 파일을 바꿔도 첨부 PDF 내부 글자는 바뀌지 않습니다. 사이트의 **PDF / 인쇄**에는 수정한 문구가 반영됩니다.
 

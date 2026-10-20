@@ -46,9 +46,9 @@ class CopyEditingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             rich_text("[링크](javascript:alert)")
 
-    def test_all_seven_pages_render(self):
+    def test_all_eight_pages_render(self):
         pages = render_pages(self.root)
-        self.assertEqual(len(pages), 7)
+        self.assertEqual(len(pages), 8)
         self.assertFalse(any("{{rich|" in page or "{{plain|" in page for page in pages.values()))
 
 

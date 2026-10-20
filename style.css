@@ -348,3 +348,59 @@
  .plant-page .plant-host-work .case-copy h3{font-size:10pt}
  .plant-page .plant-host-work .case-copy p{font-size:8.5pt;line-height:1.65}
 }
+
+/* University IoT project: one landscape sheet, as agreed for this addition. */
+.watering-diagram{border:1px solid var(--line);background:#edf0e7}
+.watering-flow{padding:22px}
+.watering-stage{display:flex;align-items:center;gap:16px;padding:16px;background:var(--white);border:1px solid var(--line)}
+.watering-stage>span{font:18px/1.4 ui-monospace,monospace;color:var(--accent)}
+.watering-stage strong{font-size:15px;display:block}
+.watering-stage p{font-size:12px;margin-top:3px}
+.watering-arrow{text-align:center;color:var(--accent);font-size:21px;line-height:1.5}
+.watering-conditions table{border-collapse:collapse;width:100%;font-size:12px;line-height:1.7}
+.watering-conditions th,.watering-conditions td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
+.watering-conditions th{background:var(--soft);font-weight:600}
+.watering-conditions td:last-child{white-space:nowrap;font-weight:600;color:var(--accent)}
+.watering-page .case-copy section+section{margin-top:18px;padding-top:16px}
+@media(max-width:600px){.watering-flow{padding:14px}.watering-stage{padding:12px;gap:12px}.watering-stage strong{font-size:14px}.watering-conditions table{font-size:11px}}
+@media print{
+ .watering-page .watering-grid{grid-template-columns:1fr 1.25fr;gap:8mm}
+ .watering-page .watering-flow{padding:3mm}
+ .watering-page .watering-stage{padding:3mm;gap:4mm}
+ .watering-page .watering-stage>span{font-size:12pt}
+ .watering-page .watering-stage strong{font-size:10pt}
+ .watering-page .watering-stage p{font-size:7.5pt;margin-top:.7mm}
+ .watering-page .watering-arrow{font-size:12pt;line-height:1.4}
+ .watering-page .case-copy section+section{margin-top:3mm;padding-top:2.5mm}
+ .watering-page .watering-conditions table{font-size:7.5pt;line-height:1.5}
+ .watering-page .watering-conditions th,.watering-page .watering-conditions td{padding:1.4mm 2mm}
+}
+
+/* Project categories follow where the work was carried out. */
+.project-groups{display:grid;gap:34px}
+.project-group-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 0 18px;border-top:2px solid var(--line)}
+.project-group-heading h3{font-size:23px}
+.project-group-heading h3 span{font:13px ui-monospace,monospace;color:var(--accent);margin-left:8px}
+.project-group-heading p{font-size:12px}
+.university-projects .project-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-nav-label{font-size:11px;font-weight:700;color:var(--ink);margin:20px 0 5px}
+@media(max-width:900px){.project-nav-label{margin:4px 0;font-size:10px;align-self:center}.project-group-heading{display:block}.project-group-heading p{margin-top:5px}}
+@media(max-width:600px){.university-projects .project-cards{grid-template-columns:1fr}}
+@media print{
+ .home-page .project-groups{gap:2mm}
+ .home-page .project-group-heading{padding:1.3mm 0;margin:0;border-top:1px solid var(--line);display:flex;align-items:center}
+ .home-page .project-group-heading h3{font-size:9pt}
+ .home-page .project-group-heading h3 span{font-size:6pt}
+ .home-page .project-group-heading p{font-size:6pt;margin:0}
+ .home-page .center-projects .project-cards{grid-template-columns:repeat(5,minmax(0,1fr));gap:2mm}
+ .home-page .university-projects .project-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:2mm}
+ .home-page .project-card{display:block;min-height:0}
+ .home-page .card-visual,.home-page .card-description,.home-page .card-link,.home-page .card-number{display:none}
+ .home-page .card-copy{padding:2mm}
+ .home-page .card-copy h3{font-size:9pt;margin:0 0 1mm}
+ .home-page .card-role{font-size:6.7pt;line-height:1.5}
+ .home-page .card-tags{font-size:5.8pt;line-height:1.5;margin-top:1mm}
+ .home-page .university-projects .card-copy{display:grid;grid-template-columns:1fr 1.6fr;gap:.5mm 3mm}
+ .home-page .university-projects .card-copy h3{grid-row:1 / 3;align-self:center;margin:0}
+ .home-page .site-footer{padding:1mm 5mm 0;margin-top:2mm;line-height:1.4}
+}
