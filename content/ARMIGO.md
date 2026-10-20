@@ -128,3 +128,15 @@ Leader Arm · 사용자 인터페이스 · Follower Arm
 
 ## 참고자료 4 · 설명
 Leader·Follower 동작 흐름 · 이미지
+
+## 참고자료 5 · 버튼
+GitHub · Master 코드 ↗
+
+## 참고자료 5 · 설명
+STM32F411RE · AX-12A 제어와 위치 송신
+
+## 참고자료 6 · 버튼
+GitHub · Slave 코드 ↗
+
+## 참고자료 6 · 설명
+위치 수신과 Follower 모터 제어
