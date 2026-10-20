@@ -13,3 +13,5 @@
 - Smart plant case-study body: omit jig-improvement images/descriptions and model training/success-rate sections at the user’s request. The second sheet now focuses on the latest host control screenshot, personal implementation and state/command validation. Current host site: https://7s-fa.github.io/host_web/control.html. Public screenshots show devices disconnected and must be labeled accordingly.
 
 - Smart greenhouse university project (2023, oh-yuntaek): user confirmed being team leader and implementing firmware, hardware configuration, temperature/humidity and water-level sensor integration, and pump logic. Do not claim web UI/server implementation, measured test results, exact dates, team size or contribution percentage. Low-water stop is confirmed in automatic mode only. Personal learning repositories are excluded.
+
+- Smart greenhouse media: the user requested one representative GIF instead of the video gallery, YouTube cards and MP4 download buttons. Keep the original clips outside the published assets and use a static fallback for reduced-motion preferences.

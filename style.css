@@ -405,19 +405,11 @@
  .home-page .site-footer{padding:1mm 5mm 0;margin-top:2mm;line-height:1.4}
 }
 
-/* Self-hosted greenhouse demos are public, with native controls and downloads. */
-.project-demo-videos{margin:24px 0;padding:28px;border:1px solid var(--line);background:var(--white);scroll-margin-top:24px}
-.demo-videos-heading h2{font-size:22px;margin-bottom:10px}
-.demo-videos-heading p{font-size:14px;line-height:1.8;margin-bottom:22px}
-.greenhouse-video-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.greenhouse-video-card{min-width:0;background:#fff;border:1px solid var(--line)}
-.greenhouse-video-card video{display:block;width:100%;height:auto;aspect-ratio:9/16;max-height:420px;object-fit:contain;background:#101513}
-.greenhouse-video-card figcaption{padding:13px 12px 0}
-.greenhouse-video-card h3{font-size:15px;line-height:1.5}
-.greenhouse-video-card figcaption p{font-size:12px;margin-top:4px}
-.greenhouse-video-card .resource-file{min-height:52px;padding:10px;margin:12px;border-radius:6px}
-.greenhouse-video-card .resource-file strong{font-size:12px}
-@media screen and (max-width:1100px){.greenhouse-video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media screen and (max-width:680px){.project-demo-videos{padding:18px}.greenhouse-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media screen and (max-width:440px){.greenhouse-video-grid{grid-template-columns:1fr}.greenhouse-video-card .resource-file strong{font-size:14px}}
-@media print{.project-demo-videos{display:none!important}}
+/* One representative GIF replaces the greenhouse video gallery. */
+.greenhouse-gif-showcase{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);align-items:center;gap:32px;margin:24px 0;padding:28px;border:1px solid var(--line);background:var(--white);scroll-margin-top:24px}
+.greenhouse-gif-showcase figure{margin:0;background:#edf0e7}
+.greenhouse-gif-showcase picture,.greenhouse-gif-showcase img{display:block;width:100%;height:auto}
+.greenhouse-gif-showcase h2{font-size:24px;line-height:1.5;margin-bottom:14px}
+.greenhouse-gif-showcase p{font-size:15px;line-height:1.9;max-width:38em}
+@media screen and (max-width:680px){.greenhouse-gif-showcase{grid-template-columns:1fr;padding:20px;gap:20px}.greenhouse-gif-showcase>div{grid-row:1}.greenhouse-gif-showcase figure{width:min(100%,260px);justify-self:center}.greenhouse-gif-showcase h2{font-size:21px}}
+@media print{.greenhouse-gif-showcase{display:none!important}}
